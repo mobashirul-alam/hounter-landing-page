@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import { Lexend } from "next/font/google";
 import "./globals.css";
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
             <body className={lexend.className}>
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     );

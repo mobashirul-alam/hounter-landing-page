@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { ChevronRight } from "lucide-react";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
@@ -45,12 +44,14 @@ const Banner = () => {
                 </p>
 
                 {/* Search */}
-                <div className="flex justify-between items-center mb-8 max-w-lg border border-[#E0E3EB] rounded-[32px] p-1">
-                    <TiLocation className="text-[#F59E0B] text-2xl ml-4" />
-                    <Input
+                <div className="flex items-center mb-8 max-w-lg border border-[#E0E3EB] rounded-[32px] p-1 gap-x-5">
+                    <div>
+                        <TiLocation className="text-[#F59E0B] text-2xl ml-3" />
+                    </div>
+                    <input
                         type="text"
+                        className="w-full h-full outline-none"
                         placeholder="Search for the location you want!"
-                        className="border-none focus:ring-0 focus:border-transparent focus:outline-none  w-[303px]"
                     />
                     <Button
                         type="submit"
