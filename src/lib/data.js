@@ -5,6 +5,10 @@ import { PiHouseFill } from "react-icons/pi";
 import avatar1 from "../assets/avatar1.png";
 import avatar2 from "../assets/avatar2.png";
 import avatar3 from "../assets/avatar3.png";
+import blog1 from "../assets/blog/blog1.png";
+import blog2 from "../assets/blog/blog2.png";
+import blog3 from "../assets/blog/blog3.png";
+import blog4 from "../assets/blog/blog4.png";
 import house1 from "../assets/featuredHouse1.png";
 import house2 from "../assets/featuredHouse2.png";
 import house3 from "../assets/featuredHouse3.png";
@@ -75,5 +79,46 @@ export const featuredHouses = [
         ownerImg: avatar3,
         category: "Best Deals",
         icon: <IoWallet />,
+    },
+];
+
+export const articles = [
+    {
+        id: 1,
+        blogImg: blog1,
+        title: "The things we need to check when we want to buy a house",
+        readTime: "4 min red",
+        date: "25 Apr 2021",
+        author: "Dianne Russel",
+        authorImg: avatar1,
+    },
+    {
+        id: 2,
+        blogImg: blog2,
+        title: "7 ways to distinguish the quality of the house we want to buy",
+        readTime: "6 min red",
+        date: "24 Apr 2021",
+        author: "Courtney Henry",
+        authorImg: avatar2,
+    },
+    {
+        id: 3,
+        blogImg: blog3,
+        title: "The best way to know the quality of the house we want to buy",
+        readTime: "2 min red",
+        date: "24 Apr 2021",
+        author: "Doriene Robertson",
+        authorImg: avatar3,
+    },
+    {
+        id: 4,
+        blogImg: blog4,
+        title: "12 things to know before buying a house",
+        readTime: "8 min red",
+        date: "25 Apr 2021",
+        author: "Cameron Williamson",
+        authorImg: avatar1,
+        description:
+            "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",
     },
 ];

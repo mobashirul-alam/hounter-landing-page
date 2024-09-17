@@ -1,3 +1,4 @@
+import Article from "./components/Article/Article";
 import Banner from "./components/Banner/Banner";
 import FeaturedHouse from "./components/FeaturedHouse/FeaturedHouse";
 import Subscription from "./components/Subscription/Subscription";
@@ -8,6 +9,7 @@ export default function Home() {
             <div>
                 <Banner />
                 <FeaturedHouse />
+                <Article />
                 <Subscription />
             </div>
         </section>
