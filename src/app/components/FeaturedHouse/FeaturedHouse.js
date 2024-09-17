@@ -1,5 +1,6 @@
 "use client";
 
+import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { featuredHouses } from "@/lib/data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -34,17 +35,10 @@ const FeaturedHouse = () => {
         <div className="max-w-[1200px] mx-auto my-[120px]">
             {/* Heading section */}
             <div className="flex justify-between items-center">
-                <div className="flex items-start gap-x-2">
-                    <div className="w-8 h-[1px] bg-[#F59E0B] mt-2"></div>
-                    <div>
-                        <p className="text-sm font-medium text-[#F59E0B] leading-[17.5px] mb-3">
-                            Our Recommendation
-                        </p>
-                        <h3 className="text-[32px] font-semibold text-[#1B1C57] leading-[40px]">
-                            Featured House
-                        </h3>
-                    </div>
-                </div>
+                <SectionHeading
+                    heading={"Featured House"}
+                    subHeading={"Our Recommendation"}
+                />
                 <div className="flex items-center gap-x-8">
                     <Button className="flex items-center gap-x-2 text-[#888B97] hover:text-[#10B981] text-lg font-medium bg-white hover:bg-[#D1FAE5] px-6 py-6 rounded-[32px] border border-[#E0E3EB]">
                         <PiHouseFill className="text-2xl" /> House
