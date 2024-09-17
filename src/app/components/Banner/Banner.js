@@ -62,7 +62,7 @@ const Banner = () => {
 
                 <div>
                     <h4 className="mt-8 text-[#888B97]">Our Partnership</h4>
-                    <div className="flex items-center gap-x-8 mt-4">
+                    <div className="flex items-center gap-x-8 mt-2">
                         {partnershipLogo.map((item) => (
                             <Image
                                 key={item.id}
