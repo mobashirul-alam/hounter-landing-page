@@ -1,6 +1,7 @@
 import Article from "./components/Article/Article";
 import Banner from "./components/Banner/Banner";
 import FeaturedHouse from "./components/FeaturedHouse/FeaturedHouse";
+import HouseTour from "./components/HouseTour/HouseTour";
 import Subscription from "./components/Subscription/Subscription";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
             <div>
                 <Banner />
                 <FeaturedHouse />
+                <HouseTour />
                 <Article />
                 <Subscription />
             </div>
