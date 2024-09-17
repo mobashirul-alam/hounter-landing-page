@@ -1,8 +1,10 @@
+import Banner from "./components/Banner/Banner";
+
 export default function Home() {
     return (
         <section>
             <div>
-                <h1>Welcome to Hounter</h1>
+                <Banner />
             </div>
         </section>
     );
