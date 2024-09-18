@@ -23,7 +23,7 @@ const Reviews = () => {
         slidesToScroll: 1,
     };
     return (
-        <div className="mb-[120px]">
+        <div className="mb-[120px] px-3 xl:px-0">
             <div className="mb-10">
                 <SectionHeadingAlt
                     subHeading={"See our review"}

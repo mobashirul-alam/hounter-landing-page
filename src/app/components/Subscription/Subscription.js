@@ -9,7 +9,7 @@ const Subscription = () => {
                 src={icons.subscriptionBG}
                 alt="subs"
                 fill
-                className="-z-20"
+                className="-z-20 px-3 xl:px-0"
             />
 
             {/* rectangle start */}

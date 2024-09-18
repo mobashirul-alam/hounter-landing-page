@@ -54,7 +54,7 @@ const footerLinks = [
 const Footer = () => {
     return (
         <section className="relative">
-            <div className="max-w-[1200px] mx-auto pb-[100px] grid grid-cols-2 md:grid-cols-5 gap-10">
+            <div className="max-w-[1200px] mx-auto pb-[100px] grid grid-cols-2 md:grid-cols-5 gap-10 px-3 xl:px-0">
                 <div className="col-span-2 space-y-4">
                     <Image src={logo} alt="Hounter logo" />
                     <p className="font-lexend text-[14px] text-[#626687] max-w-[320px]">

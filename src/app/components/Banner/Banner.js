@@ -25,7 +25,7 @@ const Banner = () => {
     ];
     return (
         <div className="relative">
-            <div className="max-w-[1200px] mx-auto pt-[182px] mb-[212px] flex justify-between">
+            <div className="max-w-[1200px] mx-auto pt-[182px] mb-[212px] flex flex-col lg:flex-row justify-center items-center lg:justify-between px-3 xl:px-0">
                 <div>
                     <h1 className="text-[#1B1C57] text-[50px] font-bold leading-[50px] mb-6">
                         Find The Place To
@@ -48,13 +48,13 @@ const Banner = () => {
                     </p>
 
                     {/* Search */}
-                    <div className="flex items-center mb-8 max-w-lg border border-[#E0E3EB] rounded-[32px] p-1 gap-x-5">
+                    <div className="flex items-center mb-8 max-w-lg border border-[#E0E3EB] rounded-[32px] p-1 gap-x-5 bg-white lg:bg-transparent">
                         <div>
                             <TiLocation className="text-[#F59E0B] text-2xl ml-3" />
                         </div>
                         <input
                             type="text"
-                            className="w-full h-full outline-none"
+                            className="w-full h-full outline-none bg-transparent"
                             placeholder="Search for the location you want!"
                         />
                         <Button
@@ -81,7 +81,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className="self-end flex items-center gap-4">
+                <div className="lg:self-end flex items-center gap-4">
                     <div className="p-6 bg-white rounded-[32px] shadow-[0px_11px_48px_0px_#3333330F] flex justify-center items-center gap-x-4">
                         <div className="flex items-center">
                             <Image
@@ -129,7 +129,7 @@ const Banner = () => {
                 </div>
             </div>
 
-            <div className="absolute top-0 right-0 2xl:right-56 -z-50">
+            <div className="hidden md:block absolute top-0 right-0 2xl:right-56 -z-50">
                 <div>
                     <Image src={bannerImg} alt="banner image" />
                 </div>

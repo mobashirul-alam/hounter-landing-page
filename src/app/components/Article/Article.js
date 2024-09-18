@@ -11,7 +11,7 @@ const Article = () => {
 
     return (
         <div className="relative">
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1200px] mx-auto px-3 xl:px-0">
                 <SectionHeadingAlt
                     subHeading={"See tips and trick from our partnership"}
                     heading={"Find out more about selling and buying homes"}

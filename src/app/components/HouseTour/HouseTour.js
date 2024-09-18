@@ -31,7 +31,7 @@ const details = [
 
 const HouseTour = () => {
     return (
-        <section className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 items-end gap-8 mb-[120px]">
+        <section className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 items-end gap-8 mb-[120px] px-3 xl:px-0">
             <div>
                 <SectionHeading
                     heading="Let's Tour And See Our House"

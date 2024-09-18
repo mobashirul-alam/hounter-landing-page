@@ -32,7 +32,7 @@ const FeaturedHouse = () => {
     };
 
     return (
-        <div className="max-w-[1200px] mx-auto my-[120px]">
+        <div className="max-w-[1200px] mx-auto my-[120px] px-3 xl:px-0">
             {/* Heading section */}
             <div className="flex justify-between items-center">
                 <SectionHeading
