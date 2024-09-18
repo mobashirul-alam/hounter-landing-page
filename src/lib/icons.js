@@ -1,4 +1,6 @@
 import girlAvatar from "../assets/avatar1.png";
+import boyAvatar1 from "../assets/avatar2.png";
+import boyAvatar2 from "../assets/avatar3.png";
 import bath from "../assets/icons/bath.png";
 import bed from "../assets/icons/bed.png";
 import inbox from "../assets/icons/email.png";
@@ -45,5 +47,7 @@ export const icons = {
     },
     avatar: {
         girl: girlAvatar,
+        boy1: boyAvatar1,
+        boy2: boyAvatar2,
     },
 };

@@ -5,7 +5,7 @@ const SectionHeadingAlt = ({ heading, subHeading }) => {
             <p className="text-[#F59E0B] text-sm leading-[17.5px] font-medium mb-3 text-center">
                 {subHeading}
             </p>
-            <h2 className="text-[#1B1C57] text-[32px] leading-[40px] font-semibold max-w-[422px] text-center">
+            <h2 className="text-[#1B1C57] text-[32px] leading-[40px] font-semibold max-w-[471px] text-center capitalize">
                 {heading}
             </h2>
         </div>

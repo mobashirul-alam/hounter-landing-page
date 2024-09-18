@@ -35,14 +35,14 @@ const HouseTour = () => {
             <div>
                 <SectionHeading
                     heading="Let's Tour And See Our House"
-                    subHeading="Ready To Shell"
+                    subHeading="Ready To Sell"
                 />
                 <p className="ml-10 text-[16px] text-[#626687] font-light mt-3 max-w-[413px]">
                     Houses recommended by our partners that have been curated to
                     become the home of your dreams!
                 </p>
                 <div>
-                    <h3 className="text-[16px] text-[#1B1C57] font-semibold ml-10 mt-4">
+                    <h3 className="text-[16px] text-[#1B1C57] font-semibold ml-10 my-4">
                         House Detail
                     </h3>
 
