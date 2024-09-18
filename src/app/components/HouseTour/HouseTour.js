@@ -108,7 +108,7 @@ const HouseTour = () => {
             <Image
                 src={icons.vector.green}
                 alt="green bg"
-                className="hidden md:block absolute -right-16 md:-right-40 lg:-right-16 top-0 rotate-90 md:-rotate-90 -z-50"
+                className="hidden md:block absolute -right-16 md:-right-40 lg:-right-16 top-0 rotate-90 md:-rotate-90 lg:rotate-90 -z-50"
             />
         </div>
     );

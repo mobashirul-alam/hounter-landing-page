@@ -6,6 +6,8 @@ import { featuredHouses } from "@/lib/data";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
+import { AiFillFire } from "react-icons/ai";
+import { IoWallet } from "react-icons/io5";
 import { MdApartment, MdVilla } from "react-icons/md";
 import { PiHouseFill } from "react-icons/pi";
 
@@ -102,12 +104,33 @@ const FeaturedHouse = () => {
                         {featuredHouses.map((house) => (
                             <div key={house.id}>
                                 <div className="md:ml-10">
-                                    <div>
+                                    <div className="relative">
                                         <Image
                                             src={house.image}
                                             alt={house.name}
                                             className="w-[340px] h-[242px] md:h-[382px]"
                                         />
+                                        <div className="absolute bottom-4 left-4">
+                                            {house.category === "Popular" && (
+                                                <div className="bg-[#FEE2E2] rounded-[32px] px-4 py-2 text-[#EF4444] text-sm font-medium flex items-center gap-x-2">
+                                                    <AiFillFire />
+                                                    Popular
+                                                </div>
+                                            )}
+                                            {house.category === "New House" && (
+                                                <div className="bg-[#DBEAFE] rounded-[32px] px-4 py-2 text-[#1D4ED8] text-sm font-medium flex items-center gap-x-2">
+                                                    <PiHouseFill />
+                                                    New House
+                                                </div>
+                                            )}
+                                            {house.category ===
+                                                "Best Deals" && (
+                                                <div className="bg-[#D1FAE5] rounded-[32px] px-4 py-2 text-[#047857] text-sm font-medium flex items-center gap-x-2">
+                                                    <IoWallet />
+                                                    Best Deals
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                     <div>
                                         <h2 className="text-xl md:text-2xl leading-[32px] font-medium text-[#0E1735] mt-3 md:mt-6 md:mb-2">
