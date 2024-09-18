@@ -13,15 +13,31 @@ const Reviews = () => {
     let sliderRef = useRef(null);
 
     const settings = {
-        className: "center",
-        centerMode: true,
         dots: true,
         arrows: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 2560,
+                settings: {
+                    className: "center",
+                    centerMode: true,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: { centerMode: false },
+            },
+            {
+                breakpoint: 640,
+                settings: { centerMode: false },
+            },
+        ],
     };
+
     return (
         <div className="mb-[120px] px-3 xl:px-0">
             <div className="mb-10">
@@ -45,9 +61,9 @@ const Reviews = () => {
                                     <Image
                                         src={review.houseImg}
                                         alt="house image"
-                                        className="w-[740px] h-[400px] rounded-2xl"
+                                        className="w-full md:w-[740px] h-[250px] md:h-[400px] rounded-2xl"
                                     />
-                                    <div className="max-w-[612px] bg-white shadow-[0px_9px_32px_0px_#595CDB0D] p-8 -mt-36 rounded-2xl mb-8">
+                                    <div className="max-w-[612px] bg-white shadow-[0px_9px_32px_0px_#595CDB0D] p-4 md:p-8 -mt-28 md:-mt-36 rounded-2xl mb-8 mx-4 md:mx-0">
                                         <h3 className="text-xl leading-[25px] font-semibold text-[#1B1C57] mb-4">
                                             {review.title}
                                         </h3>

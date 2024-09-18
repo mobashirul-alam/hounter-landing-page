@@ -27,30 +27,54 @@ const FeaturedHouse = () => {
         arrows: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 2560,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    initialSlide: 3,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     return (
-        <div className="max-w-[1200px] mx-auto my-[120px] px-3 xl:px-0">
+        <div className="max-w-[1200px] mx-auto my-16 md:my-[120px] px-3 xl:px-0">
             {/* Heading section */}
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col md:flex-row justify-between items-center">
                 <SectionHeading
                     heading={"Featured House"}
                     subHeading={"Our Recommendation"}
                 />
-                <div className="flex items-center gap-x-8">
-                    <Button className="flex items-center gap-x-2 text-[#888B97] hover:text-[#10B981] text-lg font-medium bg-white hover:bg-[#D1FAE5] px-6 py-6 rounded-[32px] border border-[#E0E3EB]">
-                        <PiHouseFill className="text-2xl" /> House
+                <div className="flex items-center gap-x-1 md:gap-x-2 lg:gap-x-8 my-3 md:my-0">
+                    <Button className="flex items-center gap-x-1 md:gap-x-2 text-[#888B97] hover:text-[#10B981] text-sm md:text-lg font-medium bg-white hover:bg-[#D1FAE5] px-3 md:px-6 py-3 md:py-6 rounded-[32px] border border-[#E0E3EB]">
+                        <PiHouseFill className="text-sm md:text-2xl" /> House
                     </Button>
-                    <Button className="flex items-center gap-x-2 text-[#888B97] hover:text-[#10B981] text-lg font-medium bg-white hover:bg-[#D1FAE5] px-6 py-6 rounded-[32px] border border-[#E0E3EB]">
-                        <MdVilla className="text-2xl" /> Villa
+                    <Button className="flex items-center gap-x-1 md:gap-x-2 text-[#888B97] hover:text-[#10B981] text-sm md:text-lg font-medium bg-white hover:bg-[#D1FAE5] px-3 md:px-6 py-3 md:py-6 rounded-[32px] border border-[#E0E3EB]">
+                        <MdVilla className="text-sm md:text-2xl" /> Villa
                     </Button>
-                    <Button className="flex items-center gap-x-2 text-[#888B97] hover:text-[#10B981] text-lg font-medium bg-white hover:bg-[#D1FAE5] px-6 py-6 rounded-[32px] border border-[#E0E3EB]">
-                        <MdApartment className="text-2xl" /> Apartment
+                    <Button className="flex items-center gap-x-1 md:gap-x-2 text-[#888B97] hover:text-[#10B981] text-sm md:text-lg font-medium bg-white hover:bg-[#D1FAE5] px-3 md:px-6 py-3 md:py-6 rounded-[32px] border border-[#E0E3EB]">
+                        <MdApartment className="text-sm md:text-2xl" />{" "}
+                        Apartment
                     </Button>
                 </div>
-                <div className="space-x-4">
+                <div className="hidden md:flex space-x-4 ml-5 lg:ml-0">
                     <button
                         className="px-4 py-4 text-[#3C4563] hover:text-white text-2xl bg-[#E0E3EB] hover:bg-[#10B981] rounded-[32px] transition duration-300"
                         onClick={previous}
@@ -67,7 +91,7 @@ const FeaturedHouse = () => {
             </div>
 
             {/* featured house carousel */}
-            <div className="mt-10">
+            <div className="mt-5 md:mt-10">
                 <div className="slider-container">
                     <Slider
                         ref={(slider) => {
@@ -77,33 +101,33 @@ const FeaturedHouse = () => {
                     >
                         {featuredHouses.map((house) => (
                             <div key={house.id}>
-                                <div className="ml-10">
+                                <div className="md:ml-10">
                                     <div>
                                         <Image
                                             src={house.image}
                                             alt={house.name}
-                                            className="w-[340px] h-[382px]"
+                                            className="w-[340px] h-[242px] md:h-[382px]"
                                         />
                                     </div>
                                     <div>
-                                        <h2 className="text-2xl leading-[32px] font-medium text-[#0E1735] mt-6 mb-2">
+                                        <h2 className="text-xl md:text-2xl leading-[32px] font-medium text-[#0E1735] mt-3 md:mt-6 md:mb-2">
                                             {house.name}
                                         </h2>
-                                        <p className="text-xl leading-[32px] font-medium text-[#3C4563] mb-6">
+                                        <p className="text-base md:text-xl leading-[32px] font-medium text-[#3C4563] mb-3 md:mb-6">
                                             {house.price}
                                         </p>
                                     </div>
-                                    <div className="flex items-center gap-x-4">
+                                    <div className="flex items-center gap-x-2 md:gap-x-4">
                                         <Image
                                             src={house.ownerImg}
                                             alt="ownerImage"
                                             className="w-[40px] h-[40px] rounded-full"
                                         />
                                         <div>
-                                            <p className="text-lg leading-6 font-medium text-[#0E1735]">
+                                            <p className="text-base md:text-lg leading-6 font-medium text-[#0E1735]">
                                                 {house.owner}
                                             </p>
-                                            <p className="text-sm leading-[22px] font-medium text-[#888B97]">
+                                            <p className="text-xs md:text-sm leading-[22px] font-medium text-[#888B97]">
                                                 {house.location}
                                             </p>
                                         </div>
@@ -112,6 +136,21 @@ const FeaturedHouse = () => {
                             </div>
                         ))}
                     </Slider>
+                </div>
+
+                <div className="md:hidden space-x-2 flex justify-center mt-5">
+                    <button
+                        className="p-2 text-[#3C4563] hover:text-white text-2xl bg-[#E0E3EB] hover:bg-[#10B981] rounded-[32px] transition duration-300"
+                        onClick={previous}
+                    >
+                        <ChevronLeft className="h-5" />
+                    </button>
+                    <button
+                        className="p-2 text-[#3C4563] hover:text-white text-2xl bg-[#E0E3EB] hover:bg-[#10B981] rounded-[32px] transition duration-300"
+                        onClick={next}
+                    >
+                        <ChevronRight />
+                    </button>
                 </div>
             </div>
         </div>

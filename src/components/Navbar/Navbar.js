@@ -28,8 +28,8 @@ const Navbar = () => {
 
     return (
         <div
-            className={`md:mt-7 py-3 px-3 xl:px-0 fixed top-0 z-50 w-full ${
-                scrolling ? "bg-[#10B981]/50 mt-0" : ""
+            className={` py-3 px-3 xl:px-0 fixed top-0 z-50 w-full ${
+                scrolling ? "bg-[#10B981]/50 mt-0" : "md:mt-7"
             } transition duration-300`}
         >
             <div className="w-full max-w-[1200px] mx-auto">

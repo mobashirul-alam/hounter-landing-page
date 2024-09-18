@@ -25,7 +25,7 @@ const Banner = () => {
     ];
     return (
         <div className="relative">
-            <div className="max-w-[1200px] mx-auto pt-[182px] mb-[212px] flex flex-col lg:flex-row justify-center items-center lg:justify-between px-3 xl:px-0">
+            <div className="max-w-[1200px] mx-auto pt-24 md:pt-[182px] md:mb-[212px] flex flex-col lg:flex-row justify-center items-center lg:justify-between px-3 xl:px-0">
                 <div>
                     <h1 className="text-[#1B1C57] text-[50px] font-bold leading-[50px] mb-6">
                         Find The Place To
@@ -66,10 +66,10 @@ const Banner = () => {
                     </div>
 
                     <div>
-                        <h4 className="mt-8 text-[#888B97] font-light">
+                        <h4 className="text-center md:text-left mt-8 text-[#888B97] font-light">
                             Our Partnership
                         </h4>
-                        <div className="flex items-center gap-x-8 mt-2">
+                        <div className="flex flex-wrap justify-center md:justify-start items-center gap-x-8 mt-2">
                             {partnershipLogo.map((item) => (
                                 <Image
                                     key={item.id}
@@ -81,7 +81,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <div className="lg:self-end flex items-center gap-4">
+                <div className="lg:self-end flex flex-col md:flex-row items-center gap-4">
                     <div className="p-6 bg-white rounded-[32px] shadow-[0px_11px_48px_0px_#3333330F] flex justify-center items-center gap-x-4">
                         <div className="flex items-center">
                             <Image
@@ -129,7 +129,7 @@ const Banner = () => {
                 </div>
             </div>
 
-            <div className="hidden md:block absolute top-0 right-0 2xl:right-56 -z-50">
+            <div className="hidden md:block absolute top-0 right-0 lg:-right-28 xl:-right-10 2xl:right-56 -z-50">
                 <div>
                     <Image src={bannerImg} alt="banner image" />
                 </div>

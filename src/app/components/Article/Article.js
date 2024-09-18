@@ -22,20 +22,23 @@ const Article = () => {
                     </Button>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-[68px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-5 lg:gap-x-[68px]">
                     <div>
                         {basicArticles.map((article) => (
-                            <div key={article.id} className="mb-8">
-                                <div className="flex items-center gap-x-8">
-                                    <div>
+                            <div
+                                key={article.id}
+                                className="mb-8 md:mb-5 lg:mb-8"
+                            >
+                                <div className="flex items-center gap-x-3 lg:gap-x-8">
+                                    <div className="flex-1 md:flex-auto">
                                         <Image
                                             src={article.blogImg}
                                             alt="blog thumbnail"
-                                            className="w-[250px] h-[144px]"
+                                            className="w-[300px] md:w-[250px] h-[144px]"
                                         />
                                     </div>
-                                    <div>
-                                        <div className="flex items-center gap-x-4 mb-3">
+                                    <div className="flex-1 md:flex-auto">
+                                        <div className="flex items-center gap-x-1 md:gap-x-4 mb-1 lg:mb-3">
                                             <Image
                                                 src={article.authorImg}
                                                 alt="author image"
@@ -45,12 +48,12 @@ const Article = () => {
                                                 {article.author}
                                             </p>
                                         </div>
-                                        <p className="text-lg font-medium text-[#1B1C57] mb-3">
+                                        <p className="text-base md:text-lg font-medium text-[#1B1C57] mb-1 lg:mb-3">
                                             {article.title}
                                         </p>
 
                                         <p className="flex items-center text-[#888B97] text-sm leading-6">
-                                            <GoClockFill className="mr-3 text-2xl" />{" "}
+                                            <GoClockFill className="mr-1 md:mr-3 text-2xl" />{" "}
                                             {article.readTime} | {article.date}
                                         </p>
                                     </div>
